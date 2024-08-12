@@ -52,9 +52,8 @@ android {
 
 dependencies {
 
-    val nav_version = "2.7.7"
 
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.navigation:navigation-compose:2.8.0-alpha08")
 
     val lifecycle_version = "2.8.4"
     val arch_version = "2.2.0"

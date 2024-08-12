@@ -9,10 +9,10 @@ class MainRepositoryImpl(
     private val gitApiService: GitApiService
 ) : MainRepository{
 
-    override suspend fun getUsers(): Flow<List<User>>
+    override suspend fun getUsers(): List<User>
         = gitApiService.getUsers()
 
-    override suspend fun getUserRepos(name: String): Flow<List<Repository>>
+    override suspend fun getUserRepos(name: String): List<Repository>
         = gitApiService.getUserRepos(name)
 
 }

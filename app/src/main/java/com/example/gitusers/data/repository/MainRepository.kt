@@ -6,8 +6,8 @@ import kotlinx.coroutines.flow.Flow
 
 interface MainRepository {
 
-    suspend fun getUsers() : Flow<List<User>>
+    suspend fun getUsers() : List<User>
 
-    suspend fun getUserRepos(name: String) : Flow<List<Repository>>
+    suspend fun getUserRepos(name: String) : List<Repository>
 
 }

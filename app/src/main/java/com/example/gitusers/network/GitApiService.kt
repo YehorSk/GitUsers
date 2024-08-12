@@ -9,9 +9,9 @@ import retrofit2.http.Path
 interface GitApiService {
 
     @GET("users")
-    suspend fun getUsers() : Flow<List<User>>
+    suspend fun getUsers() : List<User>
 
     @GET("users/{name}/repos")
-    suspend fun getUserRepos(@Path("name") name: String) : Flow<List<Repository>>
+    suspend fun getUserRepos(@Path("name") name: String) : List<Repository>
 
 }
