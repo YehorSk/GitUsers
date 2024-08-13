@@ -14,7 +14,6 @@ interface AppContainer {
 
 class DefaultAppContainer : AppContainer{
 
-    private val baseUrl = "https://api.github.com/"
 
     private val json = Json {
         ignoreUnknownKeys = true
@@ -23,7 +22,7 @@ class DefaultAppContainer : AppContainer{
 
     private val retrofit = Retrofit.Builder()
         .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
-        .baseUrl(baseUrl)
+        .baseUrl(Constants.BASE_URL)
         .build()
 
     val retrofitService : GitApiService by lazy {

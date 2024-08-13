@@ -83,6 +83,6 @@ fun UserCardPreview(modifier: Modifier = Modifier){
 fun UsersCardListPreview(){
     GitUsersTheme {
         val mockData = List(20){User("Name_$it",it,"","")}
-        UsersList(users = mockData,{})
+        UsersList(users = mockData,{},{})
     }
 }

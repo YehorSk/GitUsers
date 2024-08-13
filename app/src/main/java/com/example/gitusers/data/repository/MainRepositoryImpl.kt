@@ -9,8 +9,8 @@ class MainRepositoryImpl(
     private val gitApiService: GitApiService
 ) : MainRepository{
 
-    override suspend fun getUsers(): List<User>
-        = gitApiService.getUsers()
+    override suspend fun getUsers(since: Int, perPage: Int): List<User>
+        = gitApiService.getUsers(since = since,perPage = perPage)
 
     override suspend fun getUserRepos(name: String): List<Repository>
         = gitApiService.getUserRepos(name)
